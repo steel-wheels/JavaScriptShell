@@ -11,6 +11,16 @@
 		05AA7CA02F6CBEEB004BADB7 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05AA7CD52F6D8198004BADB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E583D72F6CBB8800B11273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E583DE2F6CBB8800B11273;
+			remoteInfo = jsh;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		05E583DD2F6CBB8800B11273 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -78,6 +88,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		05AA7CD12F6D8190004BADB7 /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../Script/install.mk";
+			buildConfigurationList = 05AA7CD22F6D8190004BADB7 /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				05AA7CD62F6D8198004BADB7 /* PBXTargetDependency */,
+			);
+			name = Install;
+			packageProductDependencies = (
+			);
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		05E583DE2F6CBB8800B11273 /* jsh */ = {
 			isa = PBXNativeTarget;
@@ -111,6 +141,9 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					05AA7CD12F6D8190004BADB7 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					05E583DE2F6CBB8800B11273 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -131,6 +164,7 @@
 			projectRoot = "";
 			targets = (
 				05E583DE2F6CBB8800B11273 /* jsh */,
+				05AA7CD12F6D8190004BADB7 /* Install */,
 			);
 		};
 /* End PBXProject section */
@@ -145,7 +179,42 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		05AA7CD62F6D8198004BADB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E583DE2F6CBB8800B11273 /* jsh */;
+			targetProxy = 05AA7CD52F6D8198004BADB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		05AA7CD32F6D8190004BADB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05AA7CD42F6D8190004BADB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		05E583E42F6CBB8800B11273 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -272,7 +341,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_HARDENED_RUNTIME = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/Library/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/local/bin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -286,7 +360,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_HARDENED_RUNTIME = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/Library/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/local/bin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -297,6 +376,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05AA7CD22F6D8190004BADB7 /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05AA7CD32F6D8190004BADB7 /* Debug */,
+				05AA7CD42F6D8190004BADB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05E583DA2F6CBB8800B11273 /* Build configuration list for PBXProject "JavaScriptShell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
