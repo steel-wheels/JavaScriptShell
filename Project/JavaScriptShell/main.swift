@@ -9,12 +9,23 @@ import ShellKit
 import MultiDataKit
 import Foundation
 
-public func shellMain() {
-        let fileif = MIFileInterface(input:  FileHandle.standardInput,
-                                     output: FileHandle.standardOutput,
-                                     error:  FileHandle.standardError)
+public func shellMain()
+{
+        let infile  = FileHandle.standardInput
+        let outfile = FileHandle.standardOutput
+        let errfile = FileHandle.standardError
+
+        let interm  = infile.enableRawMode()
+        let outterm = outfile.enableRawMode()
+        let errterm = errfile.enableRawMode()
+
+        let fileif = MIFileInterface(input: infile, output: outfile, error: errfile)
         let shell = KSShell(fileInterface: fileif)
         shell.main()
+
+        infile.restoreRawMode(originalTerm: interm)
+        outfile.restoreRawMode(originalTerm: outterm)
+        errfile.restoreRawMode(originalTerm: errterm)
 }
 
 shellMain()
