@@ -343,10 +343,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INSTALL_PATH = "$(HOME)/local/bin";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
-					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/local/frameworks/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -362,10 +359,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INSTALL_PATH = "$(HOME)/local/bin";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
-					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/local/frameworks/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
