@@ -19,8 +19,7 @@ public func shellMain()
         let outterm = outfile.enableRawMode()
         let errterm = errfile.enableRawMode()
 
-        let fileif = MIFileInterface(input: infile, output: outfile, error: errfile)
-        let shell = KSShell(fileInterface: fileif)
+        let shell = KSShell(input: infile, output: outfile, error: errfile)
         shell.main()
 
         infile.restoreRawMode(originalTerm: interm)

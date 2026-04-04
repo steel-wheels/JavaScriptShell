@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0530D15C2F6CBC9000AE88FD /* ShellKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; };
-		05AA7CA02F6CBEEB004BADB7 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; };
+		05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */; };
+		05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */; };
+		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050E80362F8091A0000BB197 /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = ../../../local/frameworks/MultiDataKit.framework; sourceTree = "<group>"; };
+		050E80372F8091A0000BB197 /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = ../../../local/frameworks/ShellKit.framework; sourceTree = "<group>"; };
+		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
 		0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShellKit.xcframework; path = ../../../Library/Frameworks/ShellKit.xcframework; sourceTree = "<group>"; };
+		05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = "../../../Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/MultiDataKit.framework"; sourceTree = "<group>"; };
+		05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = "../../../Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64/JavaScriptKit.framework"; sourceTree = "<group>"; };
+		05A46D552F80A118000B5F8C /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = "../../../Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/ShellKit.framework"; sourceTree = "<group>"; };
 		05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
 		05E583DF2F6CBB8800B11273 /* jsh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsh; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -52,8 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05AA7CA02F6CBEEB004BADB7 /* MultiDataKit.xcframework in Frameworks */,
-				0530D15C2F6CBC9000AE88FD /* ShellKit.xcframework in Frameworks */,
+				05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */,
+				05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */,
+				05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,12 @@
 		0530D15A2F6CBC9000AE88FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05A46D552F80A118000B5F8C /* ShellKit.framework */,
+				05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */,
+				05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */,
+				050E80382F8091A0000BB197 /* JavaScriptKit.framework */,
+				050E80362F8091A0000BB197 /* MultiDataKit.framework */,
+				050E80372F8091A0000BB197 /* ShellKit.framework */,
 				05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */,
 				0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */,
 			);
@@ -139,7 +153,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					05AA7CD12F6D8190004BADB7 = {
 						CreatedOnToolsVersion = 26.3;
@@ -338,13 +352,27 @@
 		05E583E72F6CBB8800B11273 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/",
+					"$(USER_LIBRARY_DIR)/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(USER_LIBRARY_DIR)/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(USER_LIBRARY_DIR)/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
 				INSTALL_PATH = "$(HOME)/local/bin";
-				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/local/frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JavaScriptKit.macOS.JavaScriptShell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,13 +382,27 @@
 		05E583E82F6CBB8800B11273 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/",
+					"$(USER_LIBRARY_DIR)/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(USER_LIBRARY_DIR)/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(USER_LIBRARY_DIR)/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
 				INSTALL_PATH = "$(HOME)/local/bin";
-				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/local/frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JavaScriptKit.macOS.JavaScriptShell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
