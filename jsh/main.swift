@@ -23,7 +23,8 @@ public func shellMain()
         shell.standardInput  = infile
         shell.standardOutput = outfile
         shell.standardError  = errfile
-        shell.main()
+        shell.run()
+        shell.wait()
 
         infile.restoreRawMode(originalTerm: interm)
         outfile.restoreRawMode(originalTerm: outterm)

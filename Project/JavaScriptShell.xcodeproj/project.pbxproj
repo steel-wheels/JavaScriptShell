@@ -12,6 +12,16 @@
 		054EC9902F810B79005B4A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC98F2F810B79005B4A9E /* ViewController.swift */; };
 		054EC9922F810B7B005B4A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054EC9912F810B7B005B4A9E /* Assets.xcassets */; };
 		054EC9952F810B7B005B4A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054EC9932F810B7B005B4A9E /* Main.storyboard */; };
+		054EC9992F810E0E005B4A9E /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; };
+		054EC99A2F810E0E005B4A9E /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		054EC99B2F810E0E005B4A9E /* ShellKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; };
+		054EC99C2F810E0E005B4A9E /* ShellKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		054EC9A12F810E0E005B4A9E /* JavaScriptKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */; };
+		054EC9A22F810E0E005B4A9E /* JavaScriptKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		054EC9A32F810E0E005B4A9E /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; };
+		054EC9A42F810E0E005B4A9E /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		054EC9A52F810E0E005B4A9E /* TerminalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; };
+		054EC9A62F810E0E005B4A9E /* TerminalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */; };
 		05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */; };
 		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
@@ -28,6 +38,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		054EC99D2F810E0E005B4A9E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				054EC99A2F810E0E005B4A9E /* MultiDataKit.xcframework in Embed Frameworks */,
+				054EC9A22F810E0E005B4A9E /* JavaScriptKit.xcframework in Embed Frameworks */,
+				054EC9A62F810E0E005B4A9E /* TerminalKit.xcframework in Embed Frameworks */,
+				054EC9A42F810E0E005B4A9E /* MultiUIKit.xcframework in Embed Frameworks */,
+				054EC99C2F810E0E005B4A9E /* ShellKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E583DD2F6CBB8800B11273 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +75,9 @@
 		054EC98F2F810B79005B4A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		054EC9912F810B7B005B4A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		054EC9942F810B7B005B4A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JavaScriptKit.xcframework; path = ../../../Library/Frameworks/JavaScriptKit.xcframework; sourceTree = "<group>"; };
+		054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
+		054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TerminalKit.xcframework; path = ../../../Library/Frameworks/TerminalKit.xcframework; sourceTree = "<group>"; };
 		05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = "../../../Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/MultiDataKit.framework"; sourceTree = "<group>"; };
 		05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = "../../../Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64/JavaScriptKit.framework"; sourceTree = "<group>"; };
 		05A46D552F80A118000B5F8C /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = "../../../Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/ShellKit.framework"; sourceTree = "<group>"; };
@@ -62,6 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054EC9992F810E0E005B4A9E /* MultiDataKit.xcframework in Frameworks */,
+				054EC9A12F810E0E005B4A9E /* JavaScriptKit.xcframework in Frameworks */,
+				054EC9A52F810E0E005B4A9E /* TerminalKit.xcframework in Frameworks */,
+				054EC9A32F810E0E005B4A9E /* MultiUIKit.xcframework in Frameworks */,
+				054EC99B2F810E0E005B4A9E /* ShellKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +114,9 @@
 		0530D15A2F6CBC9000AE88FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */,
+				054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */,
+				054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */,
 				05A46D552F80A118000B5F8C /* ShellKit.framework */,
 				05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */,
 				05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */,
@@ -163,6 +199,7 @@
 				054EC9872F810B79005B4A9E /* Sources */,
 				054EC9882F810B79005B4A9E /* Frameworks */,
 				054EC9892F810B79005B4A9E /* Resources */,
+				054EC99D2F810E0E005B4A9E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
