@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054EC9842F810707005B4A9E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC9832F810707005B4A9E /* main.swift */; };
+		054EC98E2F810B79005B4A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC98D2F810B79005B4A9E /* AppDelegate.swift */; };
+		054EC9902F810B79005B4A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC98F2F810B79005B4A9E /* ViewController.swift */; };
+		054EC9922F810B7B005B4A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054EC9912F810B7B005B4A9E /* Assets.xcassets */; };
+		054EC9952F810B7B005B4A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054EC9932F810B7B005B4A9E /* Main.storyboard */; };
 		05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */; };
 		05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */; };
 		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
@@ -39,6 +44,12 @@
 		050E80372F8091A0000BB197 /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = ../../../local/frameworks/ShellKit.framework; sourceTree = "<group>"; };
 		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
 		0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShellKit.xcframework; path = ../../../Library/Frameworks/ShellKit.xcframework; sourceTree = "<group>"; };
+		054EC9832F810707005B4A9E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		054EC98B2F810B79005B4A9E /* JSTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		054EC98D2F810B79005B4A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		054EC98F2F810B79005B4A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		054EC9912F810B7B005B4A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		054EC9942F810B7B005B4A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = "../../../Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/MultiDataKit.framework"; sourceTree = "<group>"; };
 		05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = "../../../Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64/JavaScriptKit.framework"; sourceTree = "<group>"; };
 		05A46D552F80A118000B5F8C /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = "../../../Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/ShellKit.framework"; sourceTree = "<group>"; };
@@ -46,15 +57,14 @@
 		05E583DF2F6CBB8800B11273 /* jsh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsh; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		05E583E12F6CBB8800B11273 /* JavaScriptShell */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = JavaScriptShell;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
+		054EC9882F810B79005B4A9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E583DC2F6CBB8800B11273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,10 +93,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		054EC9852F810996005B4A9E /* JSTerminal */ = {
+			isa = PBXGroup;
+			children = (
+				054EC98D2F810B79005B4A9E /* AppDelegate.swift */,
+				054EC9912F810B7B005B4A9E /* Assets.xcassets */,
+				054EC98F2F810B79005B4A9E /* ViewController.swift */,
+				054EC9932F810B7B005B4A9E /* Main.storyboard */,
+			);
+			name = JSTerminal;
+			path = ../JSTerminal;
+			sourceTree = "<group>";
+		};
+		054EC9862F810A9D005B4A9E /* jsh */ = {
+			isa = PBXGroup;
+			children = (
+				054EC9832F810707005B4A9E /* main.swift */,
+			);
+			name = jsh;
+			path = ../jsh;
+			sourceTree = "<group>";
+		};
 		05E583D62F6CBB8800B11273 = {
 			isa = PBXGroup;
 			children = (
-				05E583E12F6CBB8800B11273 /* JavaScriptShell */,
+				054EC9862F810A9D005B4A9E /* jsh */,
+				054EC9852F810996005B4A9E /* JSTerminal */,
 				0530D15A2F6CBC9000AE88FD /* Frameworks */,
 				05E583E02F6CBB8800B11273 /* Products */,
 			);
@@ -96,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				05E583DF2F6CBB8800B11273 /* jsh */,
+				054EC98B2F810B79005B4A9E /* JSTerminal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +156,25 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		054EC98A2F810B79005B4A9E /* JSTerminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */;
+			buildPhases = (
+				054EC9872F810B79005B4A9E /* Sources */,
+				054EC9882F810B79005B4A9E /* Frameworks */,
+				054EC9892F810B79005B4A9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSTerminal;
+			packageProductDependencies = (
+			);
+			productName = JSTerminal;
+			productReference = 054EC98B2F810B79005B4A9E /* JSTerminal.app */;
+			productType = "com.apple.product-type.application";
+		};
 		05E583DE2F6CBB8800B11273 /* jsh */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E583E62F6CBB8800B11273 /* Build configuration list for PBXNativeTarget "jsh" */;
@@ -134,9 +186,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				05E583E12F6CBB8800B11273 /* JavaScriptShell */,
 			);
 			name = jsh;
 			packageProductDependencies = (
@@ -152,9 +201,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
+				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
+					054EC98A2F810B79005B4A9E = {
+						CreatedOnToolsVersion = 26.4;
+					};
 					05AA7CD12F6D8190004BADB7 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -177,17 +229,40 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				054EC98A2F810B79005B4A9E /* JSTerminal */,
 				05E583DE2F6CBB8800B11273 /* jsh */,
 				05AA7CD12F6D8190004BADB7 /* Install */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		054EC9892F810B79005B4A9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054EC9922F810B7B005B4A9E /* Assets.xcassets in Resources */,
+				054EC9952F810B7B005B4A9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		054EC9872F810B79005B4A9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054EC9902F810B79005B4A9E /* ViewController.swift in Sources */,
+				054EC98E2F810B79005B4A9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E583DB2F6CBB8800B11273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054EC9842F810707005B4A9E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +276,86 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		054EC9932F810B7B005B4A9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				054EC9942F810B7B005B4A9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		054EC9972F810B7B005B4A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS.JSTerminal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		054EC9982F810B7B005B4A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS.JSTerminal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		05AA7CD32F6D8190004BADB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -412,6 +566,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				054EC9972F810B7B005B4A9E /* Debug */,
+				054EC9982F810B7B005B4A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05AA7CD22F6D8190004BADB7 /* Build configuration list for PBXLegacyTarget "Install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
