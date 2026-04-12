@@ -7,6 +7,8 @@
 
 import ShellKit
 import TerminalKit
+import MultiDataKit
+import MultiUIKit
 import Cocoa
 
 class ViewController: NSViewController
@@ -36,7 +38,16 @@ class ViewController: NSViewController
                 shell.standardOutput    = shellToTerminalPipe.fileHandleForWriting
                 shell.standardError     = errorPipe.fileHandleForWriting
                 shell.run()
-                
+
+                /* get standard error */
+                errorPipe.fileHandleForReading.setReader(reader: {
+                        (_ str: String) -> Void in
+                        NSLog("[stderr] \(str)")
+                })
+
+                /* setup terminal */
+                setupTerminal(envVariables: shell.envVariables)
+
                 /* keep object */
                 mShell                  = shell
                 mTerminalToShellPipe    = terminalToShellPipe
@@ -47,6 +58,17 @@ class ViewController: NSViewController
         override var representedObject: Any? {
                 didSet {
                 // Update the view, if already loaded.
+                }
+        }
+
+        private func setupTerminal(envVariables envvars: MIEnvVariables) {
+                if let col = envvars.color(forKey: .terminalForeground) {
+                        let (_, nativecol) = col.toNativeColor()
+                        mTerminalView.textColor = nativecol
+                }
+                if let col = envvars.color(forKey: .terminalBackground) {
+                        let (_, nativecol) = col.toNativeColor()
+                        mTerminalView.backgroundColor = nativecol
                 }
         }
 }
