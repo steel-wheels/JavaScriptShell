@@ -70,7 +70,7 @@
 		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
 		0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShellKit.xcframework; path = ../../../Library/Frameworks/ShellKit.xcframework; sourceTree = "<group>"; };
 		054EC9832F810707005B4A9E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		054EC98B2F810B79005B4A9E /* JSTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		054EC98B2F810B79005B4A9E /* JSH Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSH Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054EC98D2F810B79005B4A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054EC98F2F810B79005B4A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		054EC9912F810B7B005B4A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		054EC9852F810996005B4A9E /* JSTerminal */ = {
+		054EC9852F810996005B4A9E /* JSHTerminal */ = {
 			isa = PBXGroup;
 			children = (
 				054EC98D2F810B79005B4A9E /* AppDelegate.swift */,
@@ -137,8 +137,8 @@
 				054EC98F2F810B79005B4A9E /* ViewController.swift */,
 				054EC9932F810B7B005B4A9E /* Main.storyboard */,
 			);
-			name = JSTerminal;
-			path = ../JSTerminal;
+			name = JSHTerminal;
+			path = ../JSHTerminal;
 			sourceTree = "<group>";
 		};
 		054EC9862F810A9D005B4A9E /* jsh */ = {
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				054EC9862F810A9D005B4A9E /* jsh */,
-				054EC9852F810996005B4A9E /* JSTerminal */,
+				054EC9852F810996005B4A9E /* JSHTerminal */,
 				0530D15A2F6CBC9000AE88FD /* Frameworks */,
 				05E583E02F6CBB8800B11273 /* Products */,
 			);
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				05E583DF2F6CBB8800B11273 /* jsh */,
-				054EC98B2F810B79005B4A9E /* JSTerminal.app */,
+				054EC98B2F810B79005B4A9E /* JSH Terminal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,9 +192,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		054EC98A2F810B79005B4A9E /* JSTerminal */ = {
+		054EC98A2F810B79005B4A9E /* JSH Terminal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */;
+			buildConfigurationList = 054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSH Terminal" */;
 			buildPhases = (
 				054EC9872F810B79005B4A9E /* Sources */,
 				054EC9882F810B79005B4A9E /* Frameworks */,
@@ -205,11 +205,11 @@
 			);
 			dependencies = (
 			);
-			name = JSTerminal;
+			name = "JSH Terminal";
 			packageProductDependencies = (
 			);
 			productName = JSTerminal;
-			productReference = 054EC98B2F810B79005B4A9E /* JSTerminal.app */;
+			productReference = 054EC98B2F810B79005B4A9E /* JSH Terminal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		05E583DE2F6CBB8800B11273 /* jsh */ = {
@@ -266,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				054EC98A2F810B79005B4A9E /* JSTerminal */,
+				054EC98A2F810B79005B4A9E /* JSH Terminal */,
 				05E583DE2F6CBB8800B11273 /* jsh */,
 				05AA7CD12F6D8190004BADB7 /* Install */,
 			);
@@ -335,9 +335,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -369,9 +381,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -603,7 +627,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */ = {
+		054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSH Terminal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054EC9972F810B7B005B4A9E /* Debug */,
