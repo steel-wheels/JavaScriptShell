@@ -7,6 +7,10 @@ And the documentations for `jsh` nd `JSH Terminal` are distributed under [GNU Fr
 
 ## Software 
 * `jsh`: JavaScript shell command line application.
-* `JSH Terminal`: The terminal application to run the JavaScriptShell.
+* `JSH Terminal`: The terminal application to run the `jsh`.
 
 ## Introduction
+The syntax of `jsh` shell script is based on the JavaScript. The script is translated into JavaScript and executed by the JavaScriptCore egine.
+
+### Script mode
+The `jsh` has script mode. The mode has 2 status: `shell mode` and `script mode`. 
