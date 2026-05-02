@@ -46,7 +46,7 @@ class ViewController: NSViewController
                 })
 
                 /* setup terminal */
-                setupTerminal(envVariables: shell.envVariables)
+                setupTerminal(preference: shell.preference)
 
                 /* keep object */
                 mShell                  = shell
@@ -61,15 +61,12 @@ class ViewController: NSViewController
                 }
         }
 
-        private func setupTerminal(envVariables envvars: MIEnvVariables) {
-                if let col = envvars.color(forKey: .terminalForeground) {
-                        let (_, nativecol) = col.toNativeColor()
-                        mTerminalView.textColor = nativecol
-                }
-                if let col = envvars.color(forKey: .terminalBackground) {
-                        let (_, nativecol) = col.toNativeColor()
-                        mTerminalView.backgroundColor = nativecol
-                }
+        private func setupTerminal(preference pref: KSPreference) {
+                let (_, fgcolor) = pref.foregroundColor.toNativeColor()
+                mTerminalView.textColor = fgcolor
+
+                let (_, bgcolor) = pref.backgroundColor.toNativeColor()
+                mTerminalView.backgroundColor = bgcolor
         }
 }
 
