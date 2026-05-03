@@ -15,7 +15,7 @@ class ViewController: NSViewController
 {
         @IBOutlet weak var mTerminalView: MITerminalView!
 
-        private var mShell:                     KSShell? = nil
+        private var mShellThread:               ShellThread? = nil
         private var mTerminalToShellPipe:       Pipe? = nil
         private var mShellToTerminalPipe:       Pipe? = nil
         private var mErrorPipe:                 Pipe? = nil
@@ -33,11 +33,12 @@ class ViewController: NSViewController
                 mTerminalView.standardError     = errorPipe.fileHandleForWriting
 
                 /* allocate and execute shell */
-                let shell = KSShell()
+                let env   = MIEnvVariables(parent: nil)
+                let shell = ShellThread(environment: env)
                 shell.standardInput     = terminalToShellPipe.fileHandleForReading
                 shell.standardOutput    = shellToTerminalPipe.fileHandleForWriting
                 shell.standardError     = errorPipe.fileHandleForWriting
-                shell.run()
+                shell.start()
 
                 /* get standard error */
                 errorPipe.fileHandleForReading.setReader(reader: {
@@ -49,7 +50,7 @@ class ViewController: NSViewController
                 setupTerminal(preference: shell.preference)
 
                 /* keep object */
-                mShell                  = shell
+                mShellThread                  = shell
                 mTerminalToShellPipe    = terminalToShellPipe
                 mShellToTerminalPipe    = shellToTerminalPipe
                 mErrorPipe              = errorPipe
