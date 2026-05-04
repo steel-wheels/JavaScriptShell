@@ -33,8 +33,7 @@ class ViewController: NSViewController
                 mTerminalView.standardError     = errorPipe.fileHandleForWriting
 
                 /* allocate and execute shell */
-                let env   = MIEnvVariables(parent: nil)
-                let shell = ShellThread(environment: env)
+                let shell = ShellThread()
                 shell.standardInput     = terminalToShellPipe.fileHandleForReading
                 shell.standardOutput    = shellToTerminalPipe.fileHandleForWriting
                 shell.standardError     = errorPipe.fileHandleForWriting

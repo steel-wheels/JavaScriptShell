@@ -11,10 +11,11 @@ import Foundation
 
 public class ShellThread: MIThread
 {
-        private let mShell: KSShell = KSShell()
+        private let mShell: KSShell
 
-        nonisolated public override init(environment env: MIEnvVariables) {
-                super.init(environment: env)
+        public nonisolated override init() {
+                mShell = KSShell()
+                super.init()
         }
 
         public var preference: KSPreference { get {
@@ -22,12 +23,14 @@ public class ShellThread: MIThread
         }}
 
         public override func main() {
-                NSLog("ShellThread: run")
                 mShell.standardInput    = self.standardInput
                 mShell.standardOutput   = self.standardOutput
                 mShell.standardError    = self.standardError
+
+                self.environment = mShell.environment
 
                 mShell.run()
                 mShell.wait()
         }
 }
+
