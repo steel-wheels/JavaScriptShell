@@ -9,28 +9,31 @@ import ShellKit
 import MultiDataKit
 import Foundation
 
-public class ShellThread: MIThread
+public class ShellThread: Thread
 {
-        private let mShell: KSShell
+        public var mShell = KSShell()
 
-        public nonisolated override init() {
-                mShell = KSShell()
-                super.init()
+        public var preference: KSPreference {
+                get       { return mShell.preference    }
         }
 
-        public var preference: KSPreference { get {
-                return mShell.preference
-        }}
+        public var standardInput: FileHandle {
+                get      { return mShell.standardInput  }
+                set(hdl) { mShell.standardInput = hdl   }
+        }
+
+        public var standardOutput: FileHandle {
+                get      { return mShell.standardOutput  }
+                set(hdl) { mShell.standardOutput = hdl   }
+        }
+
+        public var standardError: FileHandle {
+                get      { return mShell.standardError  }
+                set(hdl) { mShell.standardError = hdl   }
+        }
 
         public override func main() {
-                mShell.standardInput    = self.standardInput
-                mShell.standardOutput   = self.standardOutput
-                mShell.standardError    = self.standardError
-
-                self.environment = mShell.environment
-
                 mShell.run()
                 mShell.wait()
         }
 }
-
