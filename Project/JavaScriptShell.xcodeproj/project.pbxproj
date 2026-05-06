@@ -71,7 +71,7 @@
 		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
 		0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShellKit.xcframework; path = ../../../Library/Frameworks/ShellKit.xcframework; sourceTree = "<group>"; };
 		054EC9832F810707005B4A9E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		054EC98B2F810B79005B4A9E /* JSH Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSH Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		054EC98B2F810B79005B4A9E /* JSTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054EC98D2F810B79005B4A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		054EC98F2F810B79005B4A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		054EC9912F810B7B005B4A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				05E583DF2F6CBB8800B11273 /* jsh */,
-				054EC98B2F810B79005B4A9E /* JSH Terminal.app */,
+				054EC98B2F810B79005B4A9E /* JSTerminal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		054EC98A2F810B79005B4A9E /* JSH Terminal */ = {
+		054EC98A2F810B79005B4A9E /* JSTerminal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSH Terminal" */;
+			buildConfigurationList = 054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */;
 			buildPhases = (
 				054EC9872F810B79005B4A9E /* Sources */,
 				054EC9882F810B79005B4A9E /* Frameworks */,
@@ -208,11 +208,11 @@
 			);
 			dependencies = (
 			);
-			name = "JSH Terminal";
+			name = JSTerminal;
 			packageProductDependencies = (
 			);
 			productName = JSTerminal;
-			productReference = 054EC98B2F810B79005B4A9E /* JSH Terminal.app */;
+			productReference = 054EC98B2F810B79005B4A9E /* JSTerminal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		05E583DE2F6CBB8800B11273 /* jsh */ = {
@@ -269,7 +269,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				054EC98A2F810B79005B4A9E /* JSH Terminal */,
+				054EC98A2F810B79005B4A9E /* JSTerminal */,
 				05E583DE2F6CBB8800B11273 /* jsh */,
 				05AA7CD12F6D8190004BADB7 /* Install */,
 			);
@@ -363,7 +363,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS.JSTerminal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -409,7 +409,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS.JSTerminal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.JSTerminal.macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -631,7 +631,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSH Terminal" */ = {
+		054EC9962F810B7B005B4A9E /* Build configuration list for PBXNativeTarget "JSTerminal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				054EC9972F810B7B005B4A9E /* Debug */,
