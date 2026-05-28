@@ -15,4 +15,3 @@ The syntax of `jsh` shell script is based on the JavaScript. The script is trans
 ### Script mode
 The `jsh` has script mode. The mode has 2 status: `shell mode` and `script mode`. 
 
-openpty関数が返す、asterとslaveの定義を教えてください
