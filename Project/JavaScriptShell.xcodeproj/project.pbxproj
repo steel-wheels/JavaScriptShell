@@ -131,7 +131,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		054EC9852F810996005B4A9E /* JSHTerminal */ = {
+		054EC9852F810996005B4A9E /* JSTerminal */ = {
 			isa = PBXGroup;
 			children = (
 				054EC98D2F810B79005B4A9E /* AppDelegate.swift */,
@@ -140,8 +140,8 @@
 				0572C5B82FA78B7900DA4A71 /* ShellThread.swift */,
 				054EC9932F810B7B005B4A9E /* Main.storyboard */,
 			);
-			name = JSHTerminal;
-			path = ../JSHTerminal;
+			name = JSTerminal;
+			path = ../JSTerminal;
 			sourceTree = "<group>";
 		};
 		054EC9862F810A9D005B4A9E /* jsh */ = {
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				054EC9862F810A9D005B4A9E /* jsh */,
-				054EC9852F810996005B4A9E /* JSHTerminal */,
+				054EC9852F810996005B4A9E /* JSTerminal */,
 				0530D15A2F6CBC9000AE88FD /* Frameworks */,
 				05E583E02F6CBB8800B11273 /* Products */,
 			);
@@ -357,6 +357,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -403,6 +404,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

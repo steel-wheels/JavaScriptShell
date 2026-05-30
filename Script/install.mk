@@ -12,9 +12,24 @@ clean:
 	(cd $(DERIVED_BASE) && rm -rf $(PROJECT_NAME)_iOS_sim)
 	(cd $(HOME)/Library/Frameworks && rm -rf $(PROJECT_NAME).xcframework)
 
-install: dummy
+install: install_command install_app
+
+install_command: dummy
 	xcodebuild install \
 	  -scheme jsh \
+	  -project $(PROJECT_NAME).xcodeproj \
+	  -destination="generic/platform=macOS" \
+	  -configuration Release \
+ 	  -derivedDataPath $(DERIVED_BASE)/$(PROJECT_NAME) \
+	  -sdk macosx \
+ 	  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+	  INSTALL_ROOT=/ \
+ 	  SKIP_INSTALL=NO \
+ 	  ONLY_ACTIVE_ARCH=NO
+
+install_app: dummy
+	xcodebuild install \
+	  -scheme JSTerminal \
 	  -project $(PROJECT_NAME).xcodeproj \
 	  -destination="generic/platform=macOS" \
 	  -configuration Release \
