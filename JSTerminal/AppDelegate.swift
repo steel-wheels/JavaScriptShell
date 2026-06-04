@@ -8,10 +8,9 @@
 import Cocoa
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-        
-
+class AppDelegate: NSObject, NSApplicationDelegate
+{
+        private var mPreferenceWindowController: PreferenceWindowController? = nil
 
         func applicationDidFinishLaunching(_ aNotification: Notification) {
                 // Insert code here to initialize your application
@@ -25,6 +24,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return true
         }
 
-
+        @IBAction func openPreference(_ sender: Any) {
+                NSLog("openPreference")
+                if mPreferenceWindowController == nil {
+                        mPreferenceWindowController = PreferenceWindowController()
+                }
+                if let winctrl = mPreferenceWindowController {
+                        winctrl.showWindow(self)
+                        NSApp.activate(ignoringOtherApps: true)
+                }
+        }
 }
 

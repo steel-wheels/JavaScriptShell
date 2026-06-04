@@ -22,10 +22,12 @@
 		054EC9A42F810E0E005B4A9E /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		054EC9A52F810E0E005B4A9E /* TerminalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; };
 		054EC9A62F810E0E005B4A9E /* TerminalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05612C502FCEFC680091A903 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05612C4F2FCEFC680091A903 /* PreferenceViewController.swift */; };
 		0572C5B92FA78B7900DA4A71 /* ShellThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572C5B82FA78B7900DA4A71 /* ShellThread.swift */; };
 		05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */; };
 		05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */; };
 		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
+		05D166DF2FCF180200F3E115 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D166DE2FCF180200F3E115 /* PreferenceWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +81,13 @@
 		054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JavaScriptKit.xcframework; path = ../../../Library/Frameworks/JavaScriptKit.xcframework; sourceTree = "<group>"; };
 		054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
 		054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TerminalKit.xcframework; path = ../../../Library/Frameworks/TerminalKit.xcframework; sourceTree = "<group>"; };
+		05612C4F2FCEFC680091A903 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		0572C5B82FA78B7900DA4A71 /* ShellThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellThread.swift; sourceTree = "<group>"; };
 		05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = "../../../Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64/MultiDataKit.framework"; sourceTree = "<group>"; };
 		05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = "../../../Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64/JavaScriptKit.framework"; sourceTree = "<group>"; };
 		05A46D552F80A118000B5F8C /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = "../../../Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/ShellKit.framework"; sourceTree = "<group>"; };
 		05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
+		05D166DE2FCF180200F3E115 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
 		05E583DF2F6CBB8800B11273 /* jsh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsh; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 		054EC9852F810996005B4A9E /* JSTerminal */ = {
 			isa = PBXGroup;
 			children = (
+				05612BE92FCDD8D70091A903 /* Preference */,
 				054EC98D2F810B79005B4A9E /* AppDelegate.swift */,
 				054EC9912F810B7B005B4A9E /* Assets.xcassets */,
 				054EC98F2F810B79005B4A9E /* ViewController.swift */,
@@ -151,6 +156,15 @@
 			);
 			name = jsh;
 			path = ../jsh;
+			sourceTree = "<group>";
+		};
+		05612BE92FCDD8D70091A903 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				05612C4F2FCEFC680091A903 /* PreferenceViewController.swift */,
+				05D166DE2FCF180200F3E115 /* PreferenceWindowController.swift */,
+			);
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		05E583D62F6CBB8800B11273 = {
@@ -293,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D166DF2FCF180200F3E115 /* PreferenceWindowController.swift in Sources */,
+				05612C502FCEFC680091A903 /* PreferenceViewController.swift in Sources */,
 				054EC9902F810B79005B4A9E /* ViewController.swift in Sources */,
 				0572C5B92FA78B7900DA4A71 /* ShellThread.swift in Sources */,
 				054EC98E2F810B79005B4A9E /* AppDelegate.swift in Sources */,
