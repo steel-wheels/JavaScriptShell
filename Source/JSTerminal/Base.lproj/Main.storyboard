@@ -709,24 +709,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="640" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="197" y="190" width="246" height="21"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Your document contents here" id="Cc7-nU-5Mv">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="WNP-zY-6sa" customClass="MITerminalView" customModule="TerminalKit">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="400"/>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="TyV-c9-G0C" secondAttribute="centerY" id="Rxv-Yd-F43"/>
-                            <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
+                            <constraint firstAttribute="trailing" secondItem="WNP-zY-6sa" secondAttribute="trailing" id="ElB-Fh-wI7"/>
+                            <constraint firstItem="WNP-zY-6sa" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="Hiq-ii-5oV"/>
+                            <constraint firstItem="WNP-zY-6sa" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="RRL-YA-cS3"/>
+                            <constraint firstAttribute="bottom" secondItem="WNP-zY-6sa" secondAttribute="bottom" id="fIP-DH-dmy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mTerminalView" destination="WNP-zY-6sa" id="KFR-hP-Txg"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="74" y="826"/>
         </scene>
     </scenes>
 </document>

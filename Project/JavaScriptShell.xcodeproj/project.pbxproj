@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0502B60E2FD39EA400A70FF8 /* ShellThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B60D2FD39EA400A70FF8 /* ShellThread.swift */; };
+		053350032FD39B59008A3B97 /* JavaScriptKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */; };
+		053350042FD39B59008A3B97 /* JavaScriptKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053350052FD39B59008A3B97 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; };
+		053350062FD39B59008A3B97 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053350072FD39B59008A3B97 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; };
+		053350082FD39B59008A3B97 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053350092FD39B59008A3B97 /* ShellKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; };
+		0533500A2FD39B59008A3B97 /* ShellKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0533500B2FD39B59008A3B97 /* TerminalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; };
+		0533500C2FD39B59008A3B97 /* TerminalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		054EC9842F810707005B4A9E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC9832F810707005B4A9E /* main.swift */; };
 		054EC98E2F810B79005B4A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC98D2F810B79005B4A9E /* AppDelegate.swift */; };
 		054EC9902F810B79005B4A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC98F2F810B79005B4A9E /* ViewController.swift */; };
@@ -46,6 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0533500D2FD39B59008A3B97 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				053350062FD39B59008A3B97 /* MultiDataKit.xcframework in Embed Frameworks */,
+				053350082FD39B59008A3B97 /* MultiUIKit.xcframework in Embed Frameworks */,
+				0533500C2FD39B59008A3B97 /* TerminalKit.xcframework in Embed Frameworks */,
+				053350042FD39B59008A3B97 /* JavaScriptKit.xcframework in Embed Frameworks */,
+				0533500A2FD39B59008A3B97 /* ShellKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		054EC99D2F810E0E005B4A9E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0502B60D2FD39EA400A70FF8 /* ShellThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellThread.swift; sourceTree = "<group>"; };
 		050E80362F8091A0000BB197 /* MultiDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultiDataKit.framework; path = ../../../local/frameworks/MultiDataKit.framework; sourceTree = "<group>"; };
 		050E80372F8091A0000BB197 /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = ../../../local/frameworks/ShellKit.framework; sourceTree = "<group>"; };
 		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
@@ -128,6 +155,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053350052FD39B59008A3B97 /* MultiDataKit.xcframework in Frameworks */,
+				053350072FD39B59008A3B97 /* MultiUIKit.xcframework in Frameworks */,
+				0533500B2FD39B59008A3B97 /* TerminalKit.xcframework in Frameworks */,
+				053350032FD39B59008A3B97 /* JavaScriptKit.xcframework in Frameworks */,
+				053350092FD39B59008A3B97 /* ShellKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +245,7 @@
 				058B18E72FD317B9008E47A2 /* Info.plist */,
 				058B18E82FD317B9008E47A2 /* Main.storyboard */,
 				058B18E92FD317B9008E47A2 /* ViewController.swift */,
+				0502B60D2FD39EA400A70FF8 /* ShellThread.swift */,
 			);
 			path = JSTerminal;
 			sourceTree = "<group>";
@@ -288,6 +321,7 @@
 				059725B62FD31795006BB5A6 /* Sources */,
 				059725B72FD31795006BB5A6 /* Frameworks */,
 				059725B82FD31795006BB5A6 /* Resources */,
+				0533500D2FD39B59008A3B97 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0502B60E2FD39EA400A70FF8 /* ShellThread.swift in Sources */,
 				058B18EE2FD317B9008E47A2 /* AppDelegate.swift in Sources */,
 				058B18EF2FD317B9008E47A2 /* Document.swift in Sources */,
 				058B18F02FD317B9008E47A2 /* ViewController.swift in Sources */,
