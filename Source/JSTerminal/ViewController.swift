@@ -59,10 +59,10 @@ class ViewController: NSViewController
         }
 
         private func setupTerminal(preference pref: KSPreference) {
-                let (_, fgcolor) = pref.foregroundColor.toNativeColor()
+                let fgcolor = pref.foregroundColor.toNativeColor()
                 mTerminalView.textColor = fgcolor
 
-                let (_, bgcolor) = pref.backgroundColor.toNativeColor()
+                let bgcolor = pref.backgroundColor.toNativeColor()
                 mTerminalView.backgroundColor = bgcolor
         }
 }
