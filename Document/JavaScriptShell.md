@@ -15,3 +15,9 @@ The syntax of `jsh` shell script is based on the JavaScript. The script is trans
 ### Script mode
 The `jsh` has script mode. The mode has 2 status: `shell mode` and `script mode`. 
 
+### `jshrc`file
+The `jshrc` (run command filr for jsh) contains the JavaScript to setup `jsh` at the boot timing.
+
+#### The location of `jshrc` file
+* for macOS
+* for iOS
