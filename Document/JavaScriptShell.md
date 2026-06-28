@@ -15,9 +15,26 @@ The syntax of `jsh` shell script is based on the JavaScript. The script is trans
 ### Script mode
 The `jsh` has script mode. The mode has 2 status: `shell mode` and `script mode`. 
 
+#### Swith the mode
+The default mode is `script mode`.
+
+This is the example of shell mode. You can execute the shell commands.
+<pre>
+% ls
+Desktop		Downloads	Movies		Pictures	tmp
+Documents	Library		Music		SystemData
+%   
+</pre>
+
 ### `jshrc`file
 The `jshrc` (run command filr for jsh) contains the JavaScript to setup `jsh` at the boot timing.
 
 #### The location of `jshrc` file
 * for macOS
 * for iOS
+
+## Related documents
+* [Builtin commands](./BuiltinCommands.md): List of supported built-in commands and it's specification.
+* [Environment variables](./EnvVariable.md): List of default environment variables.
+
+
