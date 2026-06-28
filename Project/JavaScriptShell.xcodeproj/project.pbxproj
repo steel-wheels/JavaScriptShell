@@ -151,8 +151,7 @@
 			children = (
 				054EC9832F810707005B4A9E /* main.swift */,
 			);
-			name = jsh;
-			path = ../jsh;
+			path = jsh;
 			sourceTree = "<group>";
 		};
 		059725B42FD31739006BB5A6 /* Source */ = {
