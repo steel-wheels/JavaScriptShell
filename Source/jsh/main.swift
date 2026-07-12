@@ -19,7 +19,8 @@ public func shellMain()
         let outterm = outfile.enableRawMode()
         let errterm = errfile.enableRawMode()
 
-        let shell = KSShell()
+        let ext   = ShellExtension()
+        let shell = KSShell(extension: ext)
         shell.standardInput  = infile
         shell.standardOutput = outfile
         shell.standardError  = errfile

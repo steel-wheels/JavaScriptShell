@@ -31,7 +31,9 @@ class ViewController: NSViewController
                 mTerminalView.standardError     = errorPipe.fileHandleForWriting
 
                 /* allocate and execute shell */
-                let shell = ShellThread()
+                let ext   = ShellExtension()
+                let shell = ShellThread(extension: ext)
+
                 shell.standardInput             = pseudoterm.slaveFile
                 shell.standardOutput            = pseudoterm.slaveFile
                 shell.standardError             = errorPipe.fileHandleForWriting

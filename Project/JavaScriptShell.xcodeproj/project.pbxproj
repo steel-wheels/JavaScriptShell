@@ -18,6 +18,8 @@
 		0533500A2FD39B59008A3B97 /* ShellKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0533500B2FD39B59008A3B97 /* TerminalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; };
 		0533500C2FD39B59008A3B97 /* TerminalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053B148830026552003E2552 /* ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B148730026552003E2552 /* ext.swift */; };
+		053B149230026680003E2552 /* ShellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B149130026680003E2552 /* ShellExtension.swift */; };
 		054EC9842F810707005B4A9E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC9832F810707005B4A9E /* main.swift */; };
 		058B18EB2FD317B9008E47A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058B18E52FD317B9008E47A2 /* Assets.xcassets */; };
 		058B18ED2FD317B9008E47A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058B18E82FD317B9008E47A2 /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 		050E80372F8091A0000BB197 /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = ../../../local/frameworks/ShellKit.framework; sourceTree = "<group>"; };
 		050E80382F8091A0000BB197 /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = ../../../local/frameworks/JavaScriptKit.framework; sourceTree = "<group>"; };
 		0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShellKit.xcframework; path = ../../../Library/Frameworks/ShellKit.xcframework; sourceTree = "<group>"; };
+		053B148730026552003E2552 /* ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ext.swift; sourceTree = "<group>"; };
+		053B149130026680003E2552 /* ShellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellExtension.swift; sourceTree = "<group>"; };
 		054EC9832F810707005B4A9E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JavaScriptKit.xcframework; path = ../../../Library/Frameworks/JavaScriptKit.xcframework; sourceTree = "<group>"; };
 		054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				054EC9832F810707005B4A9E /* main.swift */,
+				053B148730026552003E2552 /* ext.swift */,
 			);
 			path = jsh;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				0502B60D2FD39EA400A70FF8 /* ShellThread.swift */,
 				05C638362FD84048008F3A15 /* PreferenceViewController.swift */,
 				05C638372FD84048008F3A15 /* PreferenceWindowController.swift */,
+				053B149130026680003E2552 /* ShellExtension.swift */,
 			);
 			path = JSTerminal;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			files = (
 				05C638382FD84048008F3A15 /* PreferenceViewController.swift in Sources */,
 				05C638392FD84048008F3A15 /* PreferenceWindowController.swift in Sources */,
+				053B149230026680003E2552 /* ShellExtension.swift in Sources */,
 				0502B60E2FD39EA400A70FF8 /* ShellThread.swift in Sources */,
 				058B18EE2FD317B9008E47A2 /* AppDelegate.swift in Sources */,
 				058B18EF2FD317B9008E47A2 /* Document.swift in Sources */,
@@ -337,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				054EC9842F810707005B4A9E /* main.swift in Sources */,
+				053B148830026552003E2552 /* ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

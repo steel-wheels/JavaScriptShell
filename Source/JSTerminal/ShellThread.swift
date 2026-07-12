@@ -11,7 +11,11 @@ import Foundation
 
 public class ShellThread: Thread
 {
-        public var mShell = KSShell()
+        private var mShell: KSShell
+
+        public init(extension ext: ShellExtension) {
+                mShell = KSShell(extension: ext)
+        }
 
         public var preference: KSPreference {
                 get       { return mShell.preference    }
