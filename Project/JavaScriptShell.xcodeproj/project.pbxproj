@@ -31,6 +31,8 @@
 		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
 		05C638382FD84048008F3A15 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C638362FD84048008F3A15 /* PreferenceViewController.swift */; };
 		05C638392FD84048008F3A15 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C638372FD84048008F3A15 /* PreferenceWindowController.swift */; };
+		05E00B91300CA67D007F2B04 /* Library.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E00B8F300CA644007F2B04 /* Library.js */; };
+		05E00B93300CA694007F2B04 /* Library.d.ts in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E00B8E300CA634007F2B04 /* Library.d.ts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,26 @@
 				0533500A2FD39B59008A3B97 /* ShellKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E00B90300CA666007F2B04 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Library;
+			dstSubfolderSpec = 7;
+			files = (
+				05E00B91300CA67D007F2B04 /* Library.js in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E00B92300CA684007F2B04 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Library/types;
+			dstSubfolderSpec = 7;
+			files = (
+				05E00B93300CA694007F2B04 /* Library.d.ts in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		05E583DD2F6CBB8800B11273 /* CopyFiles */ = {
@@ -95,6 +117,8 @@
 		05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
 		05C638362FD84048008F3A15 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		05C638372FD84048008F3A15 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
+		05E00B8E300CA634007F2B04 /* Library.d.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = Library.d.ts; sourceTree = "<group>"; };
+		05E00B8F300CA644007F2B04 /* Library.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Library.js; sourceTree = "<group>"; };
 		05E583DF2F6CBB8800B11273 /* jsh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsh; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,10 +210,45 @@
 			path = JSTerminal;
 			sourceTree = "<group>";
 		};
+		05E00B8A300CA510007F2B04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				05E00B8C300CA594007F2B04 /* Samples */,
+				05E00B8B300CA546007F2B04 /* Library */,
+			);
+			name = Resource;
+			path = ../Resource;
+			sourceTree = "<group>";
+		};
+		05E00B8B300CA546007F2B04 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				05E00B8F300CA644007F2B04 /* Library.js */,
+				05E00B8D300CA5DC007F2B04 /* types */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		05E00B8C300CA594007F2B04 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		05E00B8D300CA5DC007F2B04 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				05E00B8E300CA634007F2B04 /* Library.d.ts */,
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
 		05E583D62F6CBB8800B11273 = {
 			isa = PBXGroup;
 			children = (
 				059725B42FD31739006BB5A6 /* Source */,
+				05E00B8A300CA510007F2B04 /* Resource */,
 				059725BB2FD31795006BB5A6 /* JSTerminal */,
 				0530D15A2F6CBC9000AE88FD /* Frameworks */,
 				05E583E02F6CBB8800B11273 /* Products */,
@@ -236,6 +295,8 @@
 				059725B72FD31795006BB5A6 /* Frameworks */,
 				059725B82FD31795006BB5A6 /* Resources */,
 				0533500D2FD39B59008A3B97 /* Embed Frameworks */,
+				05E00B90300CA666007F2B04 /* CopyFiles */,
+				05E00B92300CA684007F2B04 /* CopyFiles */,
 			);
 			buildRules = (
 			);
