@@ -6,6 +6,7 @@
  */
 
 import ShellKit
+import MultiUIKit
 import Foundation
 
 public class ShellExtension: KSShellExtension
@@ -14,6 +15,14 @@ public class ShellExtension: KSShellExtension
         }
 
         public override nonisolated var doesSupportFileSelector: Bool {
-                get { false }
+                get { return true }
+        }
+
+        public override nonisolated func selectFile(title tstr: String, fileType file: KSShellExtension.FileType, extension estr: String) -> URL? {
+                if let url = MIPanel.openPanel(title: tstr, type: .file, fileExtensions: [estr]) {
+                        return url
+                } else {
+                        return nil
+                }
         }
 }
