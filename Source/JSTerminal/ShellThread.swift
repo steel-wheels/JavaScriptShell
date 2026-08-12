@@ -36,6 +36,10 @@ public class ShellThread: Thread
                 set(hdl) { mShell.standardError = hdl   }
         }
 
+        public var environment: MIEnvVariables { get {
+                return mShell.environment
+        }}
+
         public override func main() {
                 mShell.run()
                 mShell.wait()

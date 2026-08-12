@@ -54,6 +54,14 @@ class ViewController: NSViewController
                 mErrorPipe              = errorPipe
         }
 
+        public var preference: KSPreference? { get {
+                return mShellThread?.preference
+        }}
+
+        public var environment: MIEnvVariables? { get {
+                return mShellThread?.environment
+        }}
+
         override var representedObject: Any? {
                 didSet {
                 // Update the view, if already loaded.
