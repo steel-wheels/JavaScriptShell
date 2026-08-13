@@ -56,39 +56,63 @@ public class PreferenceViewController: NSViewController
                 let button = MIButton()
                 button.title = "Set Home Directory"
                 button.isEnabled = true
+                button.setButtonPressedCallback({
+                        () -> Void in self.selectHomeDirectory()
+                })
                 stack.addArrangedSubView(button)
 
                 return stack
         }
 
+        private func selectHomeDirectory() {
+                guard let viewctrl = self.currentViewController() else {
+                        NSLog("[Error] no view controller")
+                        return
+                }
+                if let dir = MIPanel.syncOpenPanel(title: "Select Home Directory", type: .directory, fileExtensions: []) {
+                        if let env = self.currentEnvVariables(viewController: viewctrl) {
+                                env.home = dir
+                                updateHomeDirectorySelector(environment: env)
+                        }
+                }
+        }
+
         private func updateContents() {
-                guard let curview = self.currentViewController() else {
-                        NSLog("[Error] No view controller")
+                guard let viewctrl = self.currentViewController() else {
+                        NSLog("[Error] no view controller")
                         return
                 }
-                guard let curenv = curview.environment else {
-                        NSLog("[Error] No environment variable")
-                        return
+                if let curenv = currentEnvVariables(viewController: viewctrl) {
+                        updateHomeDirectorySelector(environment: curenv)
                 }
-                updateHomeDirectorySelector(environment: curenv)
         }
 
         private func updateHomeDirectorySelector(environment env: MIEnvVariables) {
-                if let field = mHomeDirectoryField, let curdir = env.currentDirectory {
+                if let field = mHomeDirectoryField, let curdir = env.home {
                         field.stringValue = curdir.path
                 } else {
                         NSLog("[Error] No home directory field")
                 }
         }
 
-        private func currentViewController() -> ViewController? {
-                guard let doc = NSDocumentController.shared.currentDocument else {
+        private func currentEnvVariables(viewController curview: ViewController) -> MIEnvVariables? {
+                guard let curenv = curview.environment else {
+                        NSLog("[Error] No environment variable")
                         return nil
                 }
+                return curenv
+        }
+
+        private func currentViewController() -> ViewController? {
+                guard let doc = NSDocument.frontDocument else {
+                        return nil
+                }
+
                 let vconts = doc.windowControllers
                 guard vconts.count > 0 else {
                         return nil
                 }
+
                 if let vcont = vconts[0].contentViewController as? ViewController {
                         return vcont
                 } else {

@@ -19,7 +19,7 @@ public class ShellExtension: KSShellExtension
         }
 
         public override nonisolated func selectFile(title tstr: String, fileType file: KSShellExtension.FileType, extension estr: String) -> URL? {
-                if let url = MIPanel.openPanel(title: tstr, type: .file, fileExtensions: [estr]) {
+                if let url = MIPanel.asyncOpenPanel(title: tstr, type: .file, fileExtensions: [estr]) {
                         return url
                 } else {
                         return nil
