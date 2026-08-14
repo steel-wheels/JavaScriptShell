@@ -2,6 +2,10 @@
  * hello.ts
  */
 
-// <reference path="types/BuiltinLibrary.d.ts"/>
-_log("hello, world\n") ;
+/// <reference path="types/Library.d.ts"/>
+
+function main(args: string[])
+{
+	console.log("hello, world\n") ;
+}
 
