@@ -1,4 +1,4 @@
 /**
  * hello.ts
  */
-declare function main(args: string[]): void;
+declare function main(args: string[]): number;

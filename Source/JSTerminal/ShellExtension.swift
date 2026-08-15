@@ -9,17 +9,18 @@ import ShellKit
 import MultiUIKit
 import Foundation
 
+@MainActor
 public class ShellExtension: KSShellExtension
 {
-        public override nonisolated init() {
+        public override init() {
         }
 
-        public override nonisolated var doesSupportFileSelector: Bool {
+        public override var doesSupportFileSelector: Bool {
                 get { return true }
         }
 
-        public override nonisolated func selectFile(title tstr: String, fileType file: KSShellExtension.FileType, extension estr: String) -> URL? {
-                if let url = MIPanel.asyncOpenPanel(title: tstr, type: .file, fileExtensions: [estr]) {
+        public override func selectFile(title tstr: String, fileType file: KSShellExtension.FileType, extension estr: String) -> URL? {
+                if let url = MIPanel.openPanel(title: tstr, type: .file, fileExtensions: [estr]) {
                         return url
                 } else {
                         return nil

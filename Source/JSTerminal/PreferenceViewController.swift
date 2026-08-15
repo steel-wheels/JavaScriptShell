@@ -69,7 +69,7 @@ public class PreferenceViewController: NSViewController
                         NSLog("[Error] no view controller")
                         return
                 }
-                if let dir = MIPanel.syncOpenPanel(title: "Select Home Directory", type: .directory, fileExtensions: []) {
+                if let dir = MIPanel.openPanel(title: "Select Home Directory", type: .directory, fileExtensions: []) {
                         if let env = self.currentEnvVariables(viewController: viewctrl) {
                                 env.home = dir
                                 updateHomeDirectorySelector(environment: env)

@@ -8,7 +8,9 @@
 import ShellKit
 import MultiDataKit
 import Foundation
+import _Concurrency
 
+@MainActor
 public func shellMain()
 {
         let infile  = FileHandle.standardInput
@@ -32,6 +34,11 @@ public func shellMain()
         errfile.restoreRawMode(originalTerm: errterm)
 }
 
-shellMain()
+Task { @MainActor in
+        shellMain()
+}
 
-
+// Keep the run loop alive until the task completes if necessary
+// Since shellMain() is synchronous and blocking until shell.wait(), the Task will complete when done.
+// For command-line tools, the process will stay alive while the Task runs.
+RunLoop.current.run(mode: .default, before: Date(timeIntervalSinceNow: 0.01))
