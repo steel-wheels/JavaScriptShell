@@ -31,8 +31,7 @@ class ViewController: NSViewController
                 mTerminalView.standardError     = errorPipe.fileHandleForWriting
 
                 /* allocate and execute shell */
-                let ext   = ShellExtension()
-                let shell = ShellThread(extension: ext)
+                let shell = ShellThread()
 
                 shell.standardInput             = pseudoterm.slaveFile
                 shell.standardOutput            = pseudoterm.slaveFile
@@ -46,7 +45,7 @@ class ViewController: NSViewController
                 })
 
                 /* setup terminal */
-                setupTerminal(preference: shell.preference)
+                setupTerminal(environment: shell.environment)
 
                 /* keep object */
                 mShellThread            = shell
@@ -68,12 +67,13 @@ class ViewController: NSViewController
                 }
         }
 
-        private func setupTerminal(preference pref: KSPreference) {
-                let fgcolor = pref.foregroundColor.toNativeColor()
-                mTerminalView.textColor = fgcolor
-
-                let bgcolor = pref.backgroundColor.toNativeColor()
-                mTerminalView.backgroundColor = bgcolor
+        private func setupTerminal(environment env: MIEnvVariables) {
+                if let fgcol = env.foregroundColor {
+                        mTerminalView.textColor = fgcol.toNativeColor()
+                }
+                if let bgcol = env.backgroundColor {
+                        mTerminalView.backgroundColor = bgcol.toNativeColor()
+                }
         }
 }
 

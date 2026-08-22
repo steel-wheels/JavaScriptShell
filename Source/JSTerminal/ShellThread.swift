@@ -13,8 +13,8 @@ public class ShellThread: Thread
 {
         private var mShell: KSShell
 
-        public init(extension ext: ShellExtension) {
-                mShell = KSShell(extension: ext)
+        public override init() {
+                mShell = KSShell()
         }
 
         public var preference: KSPreference {

@@ -10,7 +10,6 @@ import MultiDataKit
 import Foundation
 import _Concurrency
 
-@MainActor
 public func shellMain()
 {
         let infile  = FileHandle.standardInput
@@ -21,8 +20,7 @@ public func shellMain()
         let outterm = outfile.enableRawMode()
         let errterm = errfile.enableRawMode()
 
-        let ext   = ShellExtension()
-        let shell = KSShell(extension: ext)
+        let shell = KSShell()
         shell.standardInput  = infile
         shell.standardOutput = outfile
         shell.standardError  = errfile
@@ -34,11 +32,5 @@ public func shellMain()
         errfile.restoreRawMode(originalTerm: errterm)
 }
 
-Task { @MainActor in
-        shellMain()
-}
+shellMain()
 
-// Keep the run loop alive until the task completes if necessary
-// Since shellMain() is synchronous and blocking until shell.wait(), the Task will complete when done.
-// For command-line tools, the process will stay alive while the Task runs.
-RunLoop.current.run(mode: .default, before: Date(timeIntervalSinceNow: 0.01))
