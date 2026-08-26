@@ -18,6 +18,7 @@
 		0533500A2FD39B59008A3B97 /* ShellKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0533500B2FD39B59008A3B97 /* TerminalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; };
 		0533500C2FD39B59008A3B97 /* TerminalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC9A02F810E0E005B4A9E /* TerminalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053A5FBC303F2C6100DACB7C /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; };
 		054EC9842F810707005B4A9E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054EC9832F810707005B4A9E /* main.swift */; };
 		058B18EB2FD317B9008E47A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058B18E52FD317B9008E47A2 /* Assets.xcassets */; };
 		058B18ED2FD317B9008E47A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058B18E82FD317B9008E47A2 /* Main.storyboard */; };
@@ -145,6 +146,7 @@
 			files = (
 				05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */,
 				05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */,
+				053A5FBC303F2C6100DACB7C /* MultiUIKit.xcframework in Frameworks */,
 				05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +662,7 @@
 				INSTALL_PATH = "$(HOME)/local/bin";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiUIKit.xcframework/macos-arm64_x86_64",
 					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
 					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
 				);
@@ -690,6 +693,7 @@
 				INSTALL_PATH = "$(HOME)/local/bin";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiUIKit.xcframework/macos-arm64_x86_64",
 					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
 					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
 				);
