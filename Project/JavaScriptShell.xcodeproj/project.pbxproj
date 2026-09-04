@@ -28,6 +28,10 @@
 		05A46D4E2F80A0D6000B5F8C /* MultiDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D4D2F80A0D5000B5F8C /* MultiDataKit.framework */; };
 		05A46D522F80A0F4000B5F8C /* JavaScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */; };
 		05A46D562F80A118000B5F8C /* ShellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A46D552F80A118000B5F8C /* ShellKit.framework */; };
+		05B6E54F304AFEA0000682F6 /* JavaScriptKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99E2F810E0E005B4A9E /* JavaScriptKit.xcframework */; };
+		05B6E551304AFEA0000682F6 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */; };
+		05B6E553304AFEA0000682F6 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054EC99F2F810E0E005B4A9E /* MultiUIKit.xcframework */; };
+		05B6E555304AFEA0000682F6 /* ShellKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0530D15B2F6CBC9000AE88FD /* ShellKit.xcframework */; };
 		05C638382FD84048008F3A15 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C638362FD84048008F3A15 /* PreferenceViewController.swift */; };
 		05C638392FD84048008F3A15 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C638372FD84048008F3A15 /* PreferenceWindowController.swift */; };
 		05E00B91300CA67D007F2B04 /* Library.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E00B8F300CA644007F2B04 /* Library.js */; };
@@ -41,6 +45,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 05E583DE2F6CBB8800B11273;
 			remoteInfo = jsh;
+		};
+		05B6E54B304AFCBC000682F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E583D72F6CBB8800B11273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05B6E543304AFA0F000682F6;
+			remoteInfo = jsrun;
+		};
+		05B6E54D304AFD31000682F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E583D72F6CBB8800B11273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 059725B92FD31795006BB5A6;
+			remoteInfo = JSTerminal;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,6 +77,15 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05B6E542304AFA0F000682F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		05E00B90300CA666007F2B04 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -112,6 +139,7 @@
 		05A46D512F80A0F4000B5F8C /* JavaScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptKit.framework; path = "../../../Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64/JavaScriptKit.framework"; sourceTree = "<group>"; };
 		05A46D552F80A118000B5F8C /* ShellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShellKit.framework; path = "../../../Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64/ShellKit.framework"; sourceTree = "<group>"; };
 		05AA7C9F2F6CBEEB004BADB7 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
+		05B6E544304AFA0F000682F6 /* jsrun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsrun; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C638362FD84048008F3A15 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		05C638372FD84048008F3A15 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
 		05E00B8E300CA634007F2B04 /* Library.d.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = Library.d.ts; sourceTree = "<group>"; };
@@ -123,6 +151,11 @@
 		059725BB2FD31795006BB5A6 /* JSTerminal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = JSTerminal;
+			sourceTree = "<group>";
+		};
+		05B6E545304AFA0F000682F6 /* jsrun */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = jsrun;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -137,6 +170,17 @@
 				0533500B2FD39B59008A3B97 /* TerminalKit.xcframework in Frameworks */,
 				053350032FD39B59008A3B97 /* JavaScriptKit.xcframework in Frameworks */,
 				053350092FD39B59008A3B97 /* ShellKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05B6E541304AFA0F000682F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B6E551304AFEA0000682F6 /* MultiDataKit.xcframework in Frameworks */,
+				05B6E553304AFEA0000682F6 /* MultiUIKit.xcframework in Frameworks */,
+				05B6E54F304AFEA0000682F6 /* JavaScriptKit.xcframework in Frameworks */,
+				05B6E555304AFEA0000682F6 /* ShellKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				054EC9862F810A9D005B4A9E /* jsh */,
+				05B6E545304AFA0F000682F6 /* jsrun */,
 				059725B52FD31766006BB5A6 /* JSTerminal */,
 			);
 			name = Source;
@@ -256,6 +301,7 @@
 			children = (
 				05E583DF2F6CBB8800B11273 /* jsh */,
 				059725BA2FD31795006BB5A6 /* JSTerminal.app */,
+				05B6E544304AFA0F000682F6 /* jsrun */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +318,8 @@
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
+				05B6E54E304AFD31000682F6 /* PBXTargetDependency */,
+				05B6E54C304AFCBC000682F6 /* PBXTargetDependency */,
 				05AA7CD62F6D8198004BADB7 /* PBXTargetDependency */,
 			);
 			name = Install;
@@ -308,6 +356,28 @@
 			productReference = 059725BA2FD31795006BB5A6 /* JSTerminal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		05B6E543304AFA0F000682F6 /* jsrun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05B6E54A304AFA0F000682F6 /* Build configuration list for PBXNativeTarget "jsrun" */;
+			buildPhases = (
+				05B6E540304AFA0F000682F6 /* Sources */,
+				05B6E541304AFA0F000682F6 /* Frameworks */,
+				05B6E542304AFA0F000682F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				05B6E545304AFA0F000682F6 /* jsrun */,
+			);
+			name = jsrun;
+			packageProductDependencies = (
+			);
+			productName = jsrun;
+			productReference = 05B6E544304AFA0F000682F6 /* jsrun */;
+			productType = "com.apple.product-type.tool";
+		};
 		05E583DE2F6CBB8800B11273 /* jsh */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E583E62F6CBB8800B11273 /* Build configuration list for PBXNativeTarget "jsh" */;
@@ -334,7 +404,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2650;
+				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					059725B92FD31795006BB5A6 = {
@@ -342,6 +412,9 @@
 					};
 					05AA7CD12F6D8190004BADB7 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					05B6E543304AFA0F000682F6 = {
+						CreatedOnToolsVersion = 26.6;
 					};
 					05E583DE2F6CBB8800B11273 = {
 						CreatedOnToolsVersion = 26.3;
@@ -363,6 +436,7 @@
 			projectRoot = "";
 			targets = (
 				05E583DE2F6CBB8800B11273 /* jsh */,
+				05B6E543304AFA0F000682F6 /* jsrun */,
 				05AA7CD12F6D8190004BADB7 /* Install */,
 				059725B92FD31795006BB5A6 /* JSTerminal */,
 			);
@@ -395,6 +469,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05B6E540304AFA0F000682F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E583DB2F6CBB8800B11273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +491,16 @@
 			isa = PBXTargetDependency;
 			target = 05E583DE2F6CBB8800B11273 /* jsh */;
 			targetProxy = 05AA7CD52F6D8198004BADB7 /* PBXContainerItemProxy */;
+		};
+		05B6E54C304AFCBC000682F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05B6E543304AFA0F000682F6 /* jsrun */;
+			targetProxy = 05B6E54B304AFCBC000682F6 /* PBXContainerItemProxy */;
+		};
+		05B6E54E304AFD31000682F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 059725B92FD31795006BB5A6 /* JSTerminal */;
+			targetProxy = 05B6E54D304AFD31000682F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,6 +612,48 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05B6E548304AFA0F000682F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = "$(HOME)/local/bin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiUIKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		05B6E549304AFA0F000682F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = "$(HOME)/local/bin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/MultiDataKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/MultiUIKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/JavaScriptKit.xcframework/macos-arm64_x86_64",
+					"$(HOME)/Library/Frameworks/ShellKit.xcframework/macos-arm64_x86_64",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -723,6 +856,15 @@
 			buildConfigurations = (
 				05AA7CD32F6D8190004BADB7 /* Debug */,
 				05AA7CD42F6D8190004BADB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05B6E54A304AFA0F000682F6 /* Build configuration list for PBXNativeTarget "jsrun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05B6E548304AFA0F000682F6 /* Debug */,
+				05B6E549304AFA0F000682F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
